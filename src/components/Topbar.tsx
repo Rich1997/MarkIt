@@ -1,3 +1,4 @@
+import Link from "next/link";
 import GithubLogo from "../../public/assets/GithubLogo";
 import { ThemeToggle } from "./theme-toggle";
 import { Button } from "./ui/button";
@@ -8,9 +9,11 @@ export default function Topbar() {
             <div className="flex justify-between items-center gap-4 sm:gap-6">
                 <div className="flex gap-6 font-black tracking-tight">MarkIt</div>
                 <div className="flex items-center gap-2">
-                    <Button size="icon" title="Download as .md" variant="outline">
-                        <GithubLogo />
-                    </Button>
+                    <Link href="https://github.com/Rich1997/MarkIt" target="_blank" rel="noopener noreferrer">
+                        <Button size="icon" title="GitHub" variant="outline">
+                            <GithubLogo />
+                        </Button>
+                    </Link>
                     <ThemeToggle />
                 </div>
             </div>

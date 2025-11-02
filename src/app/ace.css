@@ -102,25 +102,79 @@
     background: var(--border) !important;
 }
 
-.ace_scroller {
-    background-color: transparent !important;
+/* HTML */
+.ace_meta.ace_tag {
+    color: var(--chart-2) !important;
 }
 
-/* Scrollbar styling for Ace Editor */
-.ace_scrollbar::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+.ace_entity.ace_name.ace_tag {
+    color: var(--chart-2) !important;
 }
 
-.ace_scrollbar::-webkit-scrollbar-track {
-    background: transparent;
+.ace_entity.ace_other.ace_attribute-name {
+    color: var(--chart-4) !important;
 }
 
-.ace_scrollbar::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: 6px;
+.ace_string.ace_attribute-value {
+    color: var(--chart-5) !important;
 }
 
-.ace_scrollbar::-webkit-scrollbar-thumb:hover {
-    background: var(--muted-foreground);
+.ace_meta.ace_tag.ace_punctuation {
+    color: var(--muted-foreground) !important;
+}
+
+.ace_entity.ace_name.ace_function {
+    color: var(--primary) !important;
+}
+
+.ace_storage.ace_type {
+    color: var(--primary) !important;
+}
+
+.ace_entity.ace_other.ace_inherited-class {
+    color: var(--chart-3) !important;
+}
+
+.ace_identifier {
+    color: var(--foreground) !important;
+}
+
+.ace_punctuation {
+    color: var(--muted-foreground) !important;
+}
+
+.ace_punctuation.ace_definition.ace_comment {
+    color: var(--muted-foreground) !important;
+}
+
+.ace_constant.ace_numeric {
+    color: var(--chart-3) !important;
+}
+
+.ace_constant.ace_language {
+    color: var(--chart-4) !important;
+}
+
+.ace_constant.ace_character {
+    color: var(--chart-5) !important;
+}
+
+.ace_constant.ace_other {
+    color: var(--chart-3) !important;
+}
+
+.ace_support.ace_function {
+    color: var(--chart-2) !important;
+}
+
+.ace_support.ace_constant {
+    color: var(--chart-4) !important;
+}
+
+.ace_support.ace_type {
+    color: var(--chart-2) !important;
+}
+
+.ace_support.ace_class {
+    color: var(--chart-2) !important;
 }

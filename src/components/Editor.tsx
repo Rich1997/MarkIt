@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Sidebar, SidebarClose, Copy, Download, Check } from "lucide-react";
 import { useState, useMemo } from "react";
 import AceEditor from "react-ace";
-import { useTheme } from "next-themes";
 
 import "ace-builds/src-noconflict/mode-markdown";
 import "ace-builds/src-noconflict/theme-github";
@@ -19,7 +18,6 @@ interface EditorProps {
 
 export default function Editor({ showPreview, onTogglePreview, value, onChange }: EditorProps) {
     const [copied, setCopied] = useState(false);
-    const { resolvedTheme } = useTheme();
 
     const stats = useMemo(() => {
         const charCount = value.length;
@@ -75,7 +73,6 @@ export default function Editor({ showPreview, onTogglePreview, value, onChange }
             <div className="flex-1 overflow-hidden">
                 <AceEditor
                     mode="markdown"
-                    theme={resolvedTheme === "dark" ? "monokai" : "github"}
                     value={value}
                     onChange={onChange}
                     name="markdown-editor"
