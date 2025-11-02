@@ -1,0 +1,126 @@
+/* Custom Ace Editor Styling - Works for both light and dark modes */
+.ace_gutter {
+    background: var(--card) !important;
+    color: var(--muted-foreground) !important;
+    border-right: 1px solid var(--border) !important;
+}
+
+.ace_gutter-active-line {
+    background-color: var(--muted) !important;
+}
+
+.ace_editor {
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
+    border: none !important;
+}
+
+.ace_cursor {
+    color: var(--foreground) !important;
+}
+
+.ace_marker-layer .ace_selection {
+    background: var(--accent) !important;
+}
+
+.ace_marker-layer .ace_active-line {
+    background: var(--muted) !important;
+}
+
+.ace_marker-layer .ace_selected-word {
+    border: 1px solid var(--border) !important;
+}
+
+.ace_fold {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.ace_keyword {
+    color: var(--primary) !important;
+}
+
+.ace_constant {
+    color: var(--chart-3) !important;
+}
+
+.ace_support {
+    color: var(--chart-4) !important;
+}
+
+.ace_function {
+    color: var(--chart-2) !important;
+}
+
+.ace_string {
+    color: var(--chart-5) !important;
+}
+
+.ace_comment {
+    color: var(--muted-foreground) !important;
+    font-style: italic;
+}
+
+.ace_variable {
+    color: var(--foreground) !important;
+}
+
+.ace_heading {
+    color: var(--primary) !important;
+    font-weight: bold;
+}
+
+.ace_list {
+    color: var(--chart-3) !important;
+}
+
+.ace_markup.ace_list.ace_heading {
+    color: var(--primary) !important;
+}
+
+.ace_link {
+    color: var(--chart-3) !important;
+    text-decoration: underline;
+}
+
+.ace_markup.ace_bold {
+    font-weight: bold;
+    color: var(--foreground) !important;
+}
+
+.ace_markup.ace_italic {
+    font-style: italic;
+    color: var(--foreground) !important;
+}
+
+.ace_indent-guide {
+    background: var(--border) !important;
+}
+
+.ace_print-margin {
+    width: 1px;
+    background: var(--border) !important;
+}
+
+.ace_scroller {
+    background-color: transparent !important;
+}
+
+/* Scrollbar styling for Ace Editor */
+.ace_scrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.ace_scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ace_scrollbar::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 6px;
+}
+
+.ace_scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--muted-foreground);
+}
