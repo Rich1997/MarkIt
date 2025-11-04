@@ -1,3 +1,9 @@
-# MarkIt
+<h1 align='center'>MDPV</h1>
 
-This is a **simple** markdown editor with *real-time* preview.
+<p align='center'>
+Markdown editor and previewer.
+<br>
+<br>
+<br>
+<br>
+</p>

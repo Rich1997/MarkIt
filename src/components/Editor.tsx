@@ -78,7 +78,7 @@ export default function Editor({ showPreview, onTogglePreview, value, onChange }
                     name="markdown-editor"
                     width="100%"
                     height="100%"
-                    fontSize={14}
+                    fontSize={16}
                     showPrintMargin={false}
                     showGutter={true}
                     highlightActiveLine={true}
@@ -87,10 +87,11 @@ export default function Editor({ showPreview, onTogglePreview, value, onChange }
                         enableLiveAutocompletion: false,
                         enableSnippets: false,
                         showLineNumbers: true,
-                        tabSize: 2,
+                        tabSize: 4,
                         useWorker: false,
                         wrap: true,
-                        fontFamily: "JetBrains Mono, monospace",
+                        fontFamily: "Space Mono, monospace",
+                        scrollPastEnd: true,
                     }}
                 />
             </div>
