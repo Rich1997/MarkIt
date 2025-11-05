@@ -6,8 +6,8 @@ import { Toaster } from "@/components/ui/toaster";
 import Topbar from "@/components/Topbar";
 
 export const metadata: Metadata = {
-    title: "MarkIt",
-    description: "A markdown viewer and editor built with Next.js",
+    title: "MDPV",
+    description: "Markdown editor and previewer built with Next.js",
 };
 
 export default function RootLayout({
