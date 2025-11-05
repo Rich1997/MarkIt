@@ -65,7 +65,12 @@ export default function Editor({ showPreview, onTogglePreview, value, onChange }
                             <Download size={16} />
                         </Button>
                     </div>
-                    <Button onClick={onTogglePreview} size="icon" title={showPreview ? "Hide preview" : "Show preview"}>
+                    <Button
+                        onClick={onTogglePreview}
+                        size="icon"
+                        title={showPreview ? "Hide preview" : "Show preview"}
+                        className="md:rotate-0 rotate-90"
+                    >
                         {showPreview ? <Sidebar size={20} /> : <SidebarClose size={20} />}
                     </Button>
                 </div>

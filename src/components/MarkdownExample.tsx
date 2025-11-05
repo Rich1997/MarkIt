@@ -1,4 +1,4 @@
-export const defaultMarkdown = `# Welcome to MarkIt 🎉
+export const defaultMarkdown = `# Welcome to MDPV 🎉
 
 This is a **simple** markdown editor with *real-time* preview. Try editing this text to see it in action.
 
@@ -44,7 +44,7 @@ You can make text **bold**, *italic*, ***bold and italic***, ~~strikethrough~~, 
 
 [Visit GitHub](https://github.com)
 
-![Placeholder Image](https://via.placeholder.com/400x200?text=Markdown+Image)
+![Placeholder Image](https://fastly.picsum.photos/id/17/2500/1667.jpg?hmac=HD-JrnNUZjFiP2UZQvWcKrgLoC_pc_ouUSWv8kHsJJY)
 
 ---
 
