@@ -4,7 +4,7 @@ import "./ace.css";
 import "./highlights.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
-import Topbar from "@/components/Topbar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 export const metadata: Metadata = {
     title: "MDPV",
@@ -24,14 +24,7 @@ export default function RootLayout({
             </head>
             <body className="font-body antialiased selection:bg-primary selection:text-primary-foreground">
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-                    <div className="relative flex min-h-patch flex-col overflow-y-auto">
-                        <div className="flex flex-1 flex-col">
-                            <div className="sticky top-0 z-10 w-full">
-                                <Topbar />
-                            </div>
-                            <div className="flex flex-col flex-1 overflow-x-hidden">{children}</div>
-                        </div>
-                    </div>
+                    <SidebarProvider>{children}</SidebarProvider>
                     <Toaster />
                 </ThemeProvider>
             </body>

@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Sidebar, SidebarClose, Copy, Download, Check } from "lucide-react";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import AceEditor from "react-ace";
 
 import "ace-builds/src-noconflict/mode-markdown";
@@ -12,16 +12,24 @@ interface EditorProps {
     onTogglePreview: () => void;
     value: string;
     onChange: (value: string) => void;
+    onCursorChange?: (line: number, column: number) => void;
 }
 
-export default function Editor({ showPreview, onTogglePreview, value, onChange }: EditorProps) {
+interface CursorChangeEvent {
+    cursor: {
+        row: number;
+        column: number;
+    };
+}
+
+export default function Editor({ showPreview, onTogglePreview, value, onChange, onCursorChange }: EditorProps) {
     const [copied, setCopied] = useState(false);
 
-    const stats = useMemo(() => {
-        const charCount = value.length;
-        const lineCount = value.split("\n").length;
-        return { charCount, lineCount };
-    }, [value]);
+    const handleCursorChange = (e: CursorChangeEvent) => {
+        const line = e.cursor.row + 1;
+        const column = e.cursor.column + 1;
+        onCursorChange?.(line, column);
+    };
 
     const handleCopy = async () => {
         try {
@@ -50,11 +58,6 @@ export default function Editor({ showPreview, onTogglePreview, value, onChange }
             <div className="flex justify-between items-center gap-2 px-4 p-1 border-b bg-card text-card-foreground select-none">
                 <div>Editor</div>
                 <div className="flex items-center gap-2">
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground pr-2">
-                        <span>{stats.lineCount} lines</span>
-                        <span>•</span>
-                        <span>{stats.charCount} characters</span>
-                    </div>
                     <div className="flex items-center gap-1">
                         <Button onClick={handleCopy} size="icon" title={copied ? "Copied!" : "Copy markdown"}>
                             {copied ? <Check size={16} /> : <Copy size={16} />}
@@ -85,6 +88,7 @@ export default function Editor({ showPreview, onTogglePreview, value, onChange }
                     showPrintMargin={false}
                     showGutter={true}
                     highlightActiveLine={true}
+                    onCursorChange={handleCursorChange}
                     setOptions={{
                         enableBasicAutocompletion: true,
                         enableLiveAutocompletion: false,
