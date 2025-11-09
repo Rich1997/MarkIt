@@ -21,7 +21,7 @@ export default function Home() {
     const [activeTab, setActiveTab] = useState<SidebarTab>("files");
 
     return (
-        <div className="flex flex-col h-screen w-full">
+        <div className="flex flex-col h-screen w-full relative min-h-patch overflow-y-auto">
             <div className="sticky top-0 z-10 w-full">
                 <Topbar />
             </div>
